@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>for Awyn — from Siraj</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+<div id="dots"></div>
+
+<!-- MUSIC BAR -->
+<div id="music-bar">
+  <button class="play-btn" id="playBtn" aria-label="Play/pause music">
+    <svg id="playIcon" width="12" height="14" viewBox="0 0 12 14"><path d="M1 1l10 6-10 6V1z"/></svg>
+  </button>
+  <div class="song-info">
+    <div class="song-title">Bittersweet</div>
+    <div class="song-artist">Madison Beer</div>
+  </div>
+  <div class="bars paused" id="bars">
+    <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+  </div>
+  <div class="vol-wrap">
+    <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+    <input type="range" id="vol-slider" min="0" max="1" step="0.05" value="0.5">
+  </div>
+</div>
+
+<!-- Put bittersweet.mp3 in the /public folder -->
+<audio id="bgAudio" loop>
+  <source src="/bittersweet.mp3" type="audio/mpeg">
+</audio>
+
+<!-- SECTION 1: APOLOGY -->
+<section id="apology">
+  <div class="content">
+    <div class="heart-icon">
+      <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+        <circle cx="26" cy="26" r="25" stroke="#EDE9FF" stroke-width="1"/>
+        <path d="M26 36s-10-6-10-13a6 6 0 0 1 10-4.5A6 6 0 0 1 36 23c0 7-10 13-10 13z" fill="#C4B5FD"/>
+      </svg>
+    </div>
+    <div class="headline">
+      <h1>Pich Panha, I'm sorry<br>for how I acted.</h1>
+      <p>you deserved better from me last night — for real.</p>
+    </div>
+    <div class="message-card">
+      <p id="msg-text"></p>
+    </div>
+    <div class="actions">
+      <button class="btn" id="loveBtn">send back</button>
+      <button class="btn primary" id="forgiveBtn">i forgive you</button>
+    </div>
+    <div class="divider-line"></div>
+    <span class="footer-txt">from shinji6xy — who tilted and feels really bad about it</span>
+    <div class="scroll-hint">
+      <span>also... i made you something</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: MEMES -->
+<section id="memes">
+  <span class="meme-label">a little something to make you laugh</span>
+
+  <div class="meme-box">
+    <div class="meme-top-bar">me last night — a timeline</div>
+    <div class="meme-body">
+      <div class="stage">
+        <div class="stick stick-normal">
+          <svg width="50" height="110" viewBox="0 0 50 110" fill="none">
+            <circle cx="25" cy="18" r="13" stroke="#1A1A1A" stroke-width="2" fill="#fff"/>
+            <circle cx="20" cy="16" r="2" fill="#1A1A1A"/><circle cx="30" cy="16" r="2" fill="#1A1A1A"/>
+            <path d="M19 23 Q25 28 31 23" stroke="#1A1A1A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <line x1="25" y1="31" x2="25" y2="70" stroke="#1A1A1A" stroke-width="2"/>
+            <line x1="25" y1="45" x2="5" y2="30" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+            <line x1="25" y1="45" x2="45" y2="30" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+            <line x1="25" y1="70" x2="10" y2="100" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+            <line x1="25" y1="70" x2="40" y2="100" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="stick stick-tilt">
+          <svg width="60" height="120" viewBox="0 0 60 120" fill="none">
+            <circle cx="30" cy="20" r="14" stroke="#FB7185" stroke-width="2" fill="#FFF5F5"/>
+            <circle cx="24" cy="18" r="2.5" fill="#1A1A1A"/><circle cx="36" cy="18" r="2.5" fill="#1A1A1A"/>
+            <line x1="20" y1="11" x2="28" y2="14" stroke="#FB7185" stroke-width="2" stroke-linecap="round"/>
+            <line x1="40" y1="11" x2="32" y2="14" stroke="#FB7185" stroke-width="2" stroke-linecap="round"/>
+            <path d="M22 26 Q30 22 38 26" stroke="#1A1A1A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <line x1="10" y1="8" x2="10" y2="2" stroke="#FB7185" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="14" y1="5" x2="14" y2="1" stroke="#FB7185" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="50" y1="8" x2="50" y2="2" stroke="#FB7185" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="46" y1="5" x2="46" y2="1" stroke="#FB7185" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="30" y1="34" x2="30" y2="76" stroke="#1A1A1A" stroke-width="2"/>
+            <line x1="30" y1="48" x2="6" y2="36" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+            <line x1="30" y1="48" x2="54" y2="34" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+            <line x1="30" y1="76" x2="14" y2="108" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+            <line x1="30" y1="76" x2="46" y2="108" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+            <rect x="12" y="96" width="36" height="18" rx="3" stroke="#ccc" stroke-width="1.5" fill="#F9F9F9"/>
+            <line x1="18" y1="101" x2="18" y2="109" stroke="#ddd" stroke-width="1"/>
+            <line x1="24" y1="101" x2="24" y2="109" stroke="#ddd" stroke-width="1"/>
+            <line x1="30" y1="101" x2="30" y2="109" stroke="#ddd" stroke-width="1"/>
+            <line x1="36" y1="101" x2="36" y2="109" stroke="#ddd" stroke-width="1"/>
+            <line x1="42" y1="101" x2="42" y2="109" stroke="#ddd" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="stick stick-sorry">
+          <svg width="50" height="110" viewBox="0 0 50 110" fill="none">
+            <circle cx="25" cy="18" r="13" stroke="#1A1A1A" stroke-width="2" fill="#fff"/>
+            <circle cx="20" cy="16" r="2" fill="#1A1A1A"/><circle cx="30" cy="16" r="2" fill="#1A1A1A"/>
+            <path d="M19 25 Q25 21 31 25" stroke="#1A1A1A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <ellipse cx="20" cy="22" rx="2" ry="3" fill="#93C5FD"/>
+            <line x1="25" y1="31" x2="25" y2="70" stroke="#1A1A1A" stroke-width="2"/>
+            <line x1="25" y1="45" x2="8" y2="60" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+            <line x1="25" y1="45" x2="42" y2="60" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+            <line x1="25" y1="70" x2="10" y2="100" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+            <line x1="25" y1="70" x2="40" y2="100" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+      <div class="stage-labels">
+        <div class="stage-label">having fun<br>before queue</div>
+        <div class="stage-label center">one bad<br>round</div>
+        <div class="stage-label" style="text-align:right">5 min<br>later</div>
+      </div>
+      <div class="meme-caption-txt">it took exactly <strong>one lost round</strong> for me to become a completely different person. i am so normal about video games.</div>
+    </div>
+  </div>
+
+  <div class="meme-box">
+    <div class="meme-top-bar">actual transcript of my brain last night</div>
+    <div class="meme-body">
+      <div class="chat-meme">
+        <div class="timestamp">10:43 PM · valorant ranked</div>
+        <div class="chat-row"><div class="avatar">🧠</div><div class="bubble">hey just so you know you're doing great, this is just a game and winning isn't everything</div></div>
+        <div class="chat-row right"><div class="avatar them">😤</div><div class="bubble right">HELLO?? HOW DID WE LOSE THAT</div></div>
+        <div class="chat-row"><div class="avatar">🧠</div><div class="bubble">bro Awyn is right there. she's your friend. be kind. breathe.</div></div>
+        <div class="chat-row right"><div class="avatar them">😤</div><div class="bubble right">i am so calm right now</div></div>
+        <div class="chat-row"><div class="avatar">🧠</div><div class="bubble">you are not calm. you are the opposite of calm.</div></div>
+        <div class="chat-row right"><div class="avatar them">😤</div><div class="bubble right">[has left the chat]</div></div>
+        <div class="timestamp" style="margin-top:4px">10:44 PM · deeply regrets everything</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="meme-box" style="background:transparent;border:none">
+    <div class="two-panel">
+      <div class="panel"><div class="panel-label">what i said</div><div class="panel-icon">😤</div><div class="panel-txt">something unreasonable about the match i will not be repeating here</div></div>
+      <div class="panel"><div class="panel-label">what i meant</div><div class="panel-icon">🥺</div><div class="panel-txt">you're literally my favorite person to play with and i panicked</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: YOUTUBE + COMMENTS -->
+<section id="video-section">
+  <div class="yt-wrap">
+    <div class="yt-player">
+      <div class="yt-thumb">
+        <svg class="yt-guitar-art" width="160" height="220" viewBox="0 0 160 220" fill="none">
+          <rect x="55" y="0" width="50" height="90" rx="6" fill="#8B6914"/>
+          <rect x="73" y="0" width="14" height="88" rx="3" fill="#6B4F0F"/>
+          <line x1="64" y1="15" x2="96" y2="15" stroke="#D4A017" stroke-width="2"/>
+          <line x1="64" y1="30" x2="96" y2="30" stroke="#D4A017" stroke-width="2"/>
+          <line x1="64" y1="45" x2="96" y2="45" stroke="#D4A017" stroke-width="2"/>
+          <line x1="64" y1="60" x2="96" y2="60" stroke="#D4A017" stroke-width="2"/>
+          <line x1="64" y1="75" x2="96" y2="75" stroke="#D4A017" stroke-width="2"/>
+          <ellipse cx="80" cy="148" rx="48" ry="58" fill="#A0522D"/>
+          <ellipse cx="80" cy="148" rx="42" ry="52" fill="#8B4513"/>
+          <circle cx="80" cy="148" r="16" fill="#1a1a1a" opacity="0.6"/>
+          <line x1="80" y1="88" x2="80" y2="96" stroke="#D4A017" stroke-width="2.5"/>
+          <line x1="68" y1="96" x2="92" y2="96" stroke="#C19A2E" stroke-width="2"/>
+          <line x1="70" y1="100" x2="80" y2="205" stroke="#D4A017" stroke-width="1.2" opacity="0.8"/>
+          <line x1="74" y1="100" x2="80" y2="205" stroke="#D4A017" stroke-width="1.2" opacity="0.8"/>
+          <line x1="78" y1="100" x2="80" y2="205" stroke="#D4A017" stroke-width="1.2" opacity="0.8"/>
+          <line x1="82" y1="100" x2="80" y2="205" stroke="#D4A017" stroke-width="1.2" opacity="0.8"/>
+          <line x1="86" y1="100" x2="80" y2="205" stroke="#D4A017" stroke-width="1.2" opacity="0.8"/>
+          <line x1="90" y1="100" x2="80" y2="205" stroke="#D4A017" stroke-width="1.2" opacity="0.8"/>
+        </svg>
+        <div class="yt-thumb-label">a song for you 🎸</div>
+      </div>
+      <div class="yt-play-overlay" id="videoToggle">
+        <div class="yt-play-btn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
+      <!-- TO ADD YOUR VIDEO: put your .mp4 in /public and uncomment below -->
+      
+      <video id="myVideo" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:12px">
+        <source src="/sailor.mp4" type="video/mp4">
+      </video>
+      
+    </div>
+    
+
+    <div class="yt-info">
+      <div class="yt-title">Sailor Song — for awyn 🎸 (i'm sorry pich panha)</div>
+      <div class="yt-meta">
+        <span class="yt-views">1,247 views  •  just now</span>
+        <div class="yt-actions">
+          <button class="yt-btn" id="likeBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+            <span id="likeCount">847</span>
+          </button>
+          <button class="yt-btn" id="shareBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Share
+          </button>
+        </div>
+      </div>
+      <div class="yt-divider"></div>
+      <div class="yt-channel">
+        <div class="yt-avatar">🎸</div>
+        <div class="yt-channel-info">
+          <div class="yt-channel-name">shinji6xy</div>
+          <div class="yt-subs" id="subCount">312 subscribers</div>
+        </div>
+        <button class="yt-sub-btn" id="subBtn">Subscribe</button>
+      </div>
+      <div class="yt-desc">
+        <div class="yt-desc-preview">Awyn — i played Sailor Song because it's your favorite. i know i messed up last night in valorant and i'm genuinely sorry for tilting at you...</div>
+        <div class="yt-desc-full" id="descFull">
+          <br>i actually posted this on my story once before when i made you mad too lol. so maybe you've seen this move from me already. but i mean it every single time.<br><br>
+          you're awyn. you're one of the most patient people i play with and you didn't deserve my bad energy. Sailor Song is your fav and i wanted to remind you that i actually care about you as a friend, not just a teammate. 💜<br><br>
+          <span style="color:var(--muted)">— siraj / shinji6xy, recording at ungodly hours because guilt doesn't sleep</span>
+        </div>
+        <button class="yt-desc-more" id="descMore">...more</button>
+      </div>
+
+      <div class="yt-comments-header"><h3>47 Comments</h3></div>
+      <div id="comments-list">
+        <div class="yt-comment">
+          <div class="comment-avatar" style="background:linear-gradient(135deg,#9B59B6,#6C3483)">🐰</div>
+          <div class="comment-body">
+            <div class="comment-name">awyn <span class="badge">🐰 Judy headband</span><span class="comment-time">2 minutes ago</span></div>
+            <div class="comment-txt">siraj... i literally cannot be mad anymore 😭 Sailor Song?? really?? you know that's my fav. the guitar sounds SO good. ok you're forgiven you big idiot </div>
+            <div class="comment-actions"><button class="comment-like" data-likes="312"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg> 312</button><button class="comment-reply-btn">Reply</button></div>
+          </div>
+        </div>
+        <div class="yt-comment">
+          <div class="comment-avatar" style="background:linear-gradient(135deg,#E74C3C,#C0392B)">K</div>
+          <div class="comment-body">
+            <div class="comment-name">BaoBao<span class="comment-time">5 minutes ago</span></div>
+            <div class="comment-txt">shinji6xy made a whole apology website for awyn 💀 bro really said "i will not rest until i am forgiven" absolute legend behavior</div>
+            <div class="comment-actions"><button class="comment-like" data-likes="184"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg> 184</button><button class="comment-reply-btn">Reply</button></div>
+          </div>
+        </div>
+        <div class="yt-comment">
+          <div class="comment-avatar" style="background:linear-gradient(135deg,#1ABC9C,#16A085)">M</div>
+          <div class="comment-body">
+            <div class="comment-name">Pam<span class="comment-time">8 minutes ago</span></div>
+            <div class="comment-txt">stumbled on this and i have no idea who any of you are but playing her FAVORITE song?? that's not just sorry that's I Really Care About You energy 😭 rooting for you two</div>
+            <div class="comment-actions"><button class="comment-like" data-likes="97"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg> 97</button><button class="comment-reply-btn">Reply</button></div>
+          </div>
+        </div>
+        <div class="yt-comment">
+          <div class="comment-avatar" style="background:linear-gradient(135deg,#F39C12,#E67E22)">R</div>
+          <div class="comment-body">
+            <div class="comment-name">Danish<span class="comment-time">11 minutes ago</span></div>
+            <div class="comment-txt">awyn you HAVE to forgive him. i was in the lobby last night and siraj felt so bad after. also the fact that he played Sailor Song specifically 💀 he knows what he's doing</div>
+            <div class="comment-actions"><button class="comment-like" data-likes="143"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg> 143</button><button class="comment-reply-btn">Reply</button></div>
+          </div>
+        </div>
+        <div class="yt-comment">
+          <div class="comment-avatar" style="background:linear-gradient(135deg,#8E44AD,#6C3483)">S</div>
+          <div class="comment-body">
+            <div class="comment-name">Pam<span class="comment-time">15 minutes ago</span></div>
+            <div class="comment-txt">wait he posted this on his story before too?? siraj this is ur thing huh 😭 serial apologizer with guitar. Bittersweet playing in the bg + Sailor Song cover = undefeated apology combo</div>
+            <div class="comment-actions"><button class="comment-like" data-likes="76"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg> 76</button><button class="comment-reply-btn">Reply</button></div>
+          </div>
+        </div>
+        <div class="yt-comment">
+          <div class="comment-avatar" style="background:linear-gradient(135deg,#2980B9,#1F618D)">L</div>
+          <div class="comment-body">
+            <div class="comment-name">lunaticgamer404<span class="comment-time">18 minutes ago</span></div>
+            <div class="comment-txt">every toxic valorant player needs to take notes from shinji6xy. this is the standard. this is what accountability looks like.</div>
+            <div class="comment-actions"><button class="comment-like" data-likes="201"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg> 201</button><button class="comment-reply-btn">Reply</button></div>
+          </div>
+        </div>
+        <div class="yt-comment">
+          <div class="comment-avatar" style="background:linear-gradient(135deg,#27AE60,#1E8449)">N</div>
+          <div class="comment-body">
+            <div class="comment-name">Judy The Headband<span class="comment-time">22 minutes ago</span></div>
+            <div class="comment-txt">Awyn bestie i am sending this to you right now. read it. watch it. hear Sailor Song. cry a little. then forgive siraj. he really does feel bad 😭</div>
+            <div class="comment-actions"><button class="comment-like" data-likes="88"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg> 88</button><button class="comment-reply-btn">Reply</button></div>
+          </div>
+        </div>
+        <div class="yt-comment">
+          <div class="comment-avatar" style="background:linear-gradient(135deg,#E91E8C,#AD1457)">P</div>
+          <div class="comment-body">
+            <div class="comment-name">peachblossom.mp3<span class="comment-time">26 minutes ago</span></div>
+            <div class="comment-txt">the apology letter, the memes, the guitar cover of HER fav song, the fake comments, Bittersweet in the bg, AND he's done this before on his story... siraj is built different 😭 10/10 apology arc</div>
+            <div class="comment-actions"><button class="comment-like" data-likes="259"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg> 259</button><button class="comment-reply-btn">Reply</button></div>
+          </div>
+        </div>
+        <div class="yt-comment hidden-comment" style="display:none">
+          <div class="comment-avatar" style="background:linear-gradient(135deg,#FF6B35,#D4520A)">T</div>
+          <div class="comment-body">
+            <div class="comment-name">terraformist<span class="comment-time">31 minutes ago</span></div>
+            <div class="comment-txt">not me a random person tearing up at siraj playing Sailor Song for Awyn at 2am. i don't even know these people. the internet is something else man 😭</div>
+            <div class="comment-actions"><button class="comment-like" data-likes="412"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg> 412</button><button class="comment-reply-btn">Reply</button></div>
+          </div>
+        </div>
+      </div>
+      <button class="load-more" id="loadMoreBtn">Show more comments</button>
+    </div>
+
+    <div class="sign-section">
+      <p>anyway pich panha. i know this is a lot. but you mean a lot to me, and i wanted you to know that.<br><br>i'm really truly sorry. no more tilting i promise. </p>
+      <span class="sign-name">— siraj (shinji6xy)</span>
+      <div class="sign-underline"></div>
+    </div>
+    <div style="text-align:center;margin-top:32px">
+      <button class="btn primary" id="backTopBtn">back to the top ↑</button>
+    </div>
+  </div>
+</section>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
