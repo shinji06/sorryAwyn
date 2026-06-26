@@ -8,7 +8,13 @@ for (let i = 0; i < 12; i++) {
 }
 
 // Typewriter
-const text = "Awyn i know that im really an idiot person last night.\n\nYou're awyn. You're one of my favorite people to play with and you didn't deserve any of that. I played Sailor Song because I know it's your favorite, and I wanted to say sorry the only way I really know how. I'm genuinely really sorry. 💜";
+const text = `Hey Awyn...
+
+I just want to say sorry properly.
+
+I let my emotions get the better of me.
+
+You didn’t deserve that. 💜`;
 let idx = 0;
 const msgEl = document.getElementById('msg-text');
 const cur = document.createElement('span');
